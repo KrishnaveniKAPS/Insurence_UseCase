@@ -2,39 +2,39 @@
 <app-nav-bar></app-nav-bar>
 <!--navbar ended-->
 
-<!--Login started-->
+<!--Register started-->
 <div class="container">
   <br>
   <br>
   <div class="card-deck">
     <div class="card" style="box-shadow: 2px 2px 2px 2px red; border-radius: 15px;">
-      <form class="form" style="border-radius: 15px;">
+      <form class="form" style="border-radius: 15px;" [formGroup]="userForm" (ngSubmit)="onSubmit()">
         <br>
         <div class="form-column">
           <div class="col">
-            <label for="full_name">Full Name</label>
-            <input type="text" class="form-control" id="full_name" placeholder="Enter Full Name" name="full_name"
-              style="border-radius: 20px;">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="name"
+              style="border-radius: 20px;" formControlName="Name">
           </div>
           <div class="col">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" placeholder="Enter email" name="email"
-              style="border-radius: 20px;">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="Email"
+              style="border-radius: 20px;" formControlName="Email">
           </div>
           <div class="col">
-            <label for="phone_number">Phone Number</label>
-            <input type="number" class="form-control" id="phone_number" placeholder="Enter Phone Number"
-              name="phone_number" style="border-radius: 20px;">
+            <label for="PhoneNumber">Phone Number</label>
+            <input type="number" class="form-control" id="phonenumber" placeholder="Enter Phone Number"
+              name="phone_number" style="border-radius: 20px;" formControlName="PhoneNumber">
           </div>
           <div class="col">
             <label for="paw">Password</label>
-            <input type="password" class="form-control" id="paw" placeholder="Enter Password" name="pswd"
-              style="border-radius: 20px;">
+            <input type="password" class="form-control" id="password" placeholder="Enter Password" name="pswd"
+              style="border-radius: 20px;" formControlName="Password">
           </div>
           <div class="col">
-            <label for="Confirm_Password">Confirm Password</label>
-            <input type="password" class="form-control" id="Confirm_Password" placeholder="Enter Confirm Password"
-              name="Confirm_Password" style="border-radius: 20px;">
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmpassword" placeholder="Enter Confirm Password"
+              name="ConfirmPassword" style="border-radius: 20px;" formControlName="ConfirmPassword">
           </div>
           <div class="col">
             <br>
@@ -42,7 +42,7 @@
           </div>
           <div class="col">
             <br>
-            <button type="submit" class="btn btn-danger" style="border-radius: 20px;">Sign Up</button>
+            <button type="submit" class="btn btn-danger" style="border-radius: 20px;" id="register">Sign Up</button>
           </div>
         </div>
         <br>

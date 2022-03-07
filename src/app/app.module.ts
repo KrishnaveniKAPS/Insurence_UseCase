@@ -16,6 +16,7 @@ import { PolicyDetailsComponent } from './policy-details/policy-details.componen
 import { NewPolicyComponent } from './new-policy/new-policy.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
