@@ -17,6 +17,7 @@ import { NewPolicyComponent } from './new-policy/new-policy.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MypolicyComponent } from './mypolicy/mypolicy.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     NewPolicyComponent,
     AboutUsComponent,
     ContactUsComponent,
+    MypolicyComponent,
   ],
   imports: [
     BrowserModule,
