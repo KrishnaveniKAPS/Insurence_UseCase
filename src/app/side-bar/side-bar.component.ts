@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PolicyDetailsComponent } from '../policy-details/policy-details.component';
 
 @Component({
   selector: 'app-side-bar',
