@@ -5,7 +5,7 @@
       <a class="nav-link active" data-toggle="tab" href="#home" (click)="getPolicies()">All Policies</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu1">My Policies</a>
+      <a class="nav-link" data-toggle="tab" href="#menu1" (click)="getmypolicies()">My Policies</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#menu2">Create New Policy</a>
@@ -38,9 +38,34 @@
         </table>
       </div>
     </div>
+
+  
     <div id="menu1" class="container tab-pane fade">
       <div id="home" class="container tab-pane active">
-        <app-mypolicy></app-mypolicy>
+        <div class='table-responsive'>
+        <table class='table table-hover'>
+          <thead>
+            <tr>
+             <th [ngStyle]="{'color': color}">Policy_SrNo</th>
+              <th [ngStyle]="{'color': color}">Policy_ID</th>
+              <th [ngStyle]="{'color': color}">Policy_Name</th>
+              <th [ngStyle]="{'color': color}">Policy_Plan</th>
+              <th [ngStyle]="{'color': color}">Policy_Terms(yearly)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!--*ngFor Directive - Looping through the policies-->
+            <!--policies is the array holding all the polcies accessed from the PolicyService-->
+            <tr *ngFor="let policy of mypolicies;">
+              <td>{{policy.policySrNo}}</td>
+              <td>{{policy.policyID}}</td>
+              <td>{{policy.policyname}}</td>
+              <td>{{policy.policyrate}}</td>
+              <td>{{policy.policyterms}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       </div>
     </div>
     <div id="menu2" class="container tab-pane fade">

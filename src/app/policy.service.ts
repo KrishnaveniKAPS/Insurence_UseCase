@@ -22,4 +22,16 @@ export class PolicyService {
 
     return policies;               
 }
+
+public getmypolicies()
+{
+  let mypolicies:Policy[]; //creating array for my policy
+  mypolicies=
+  [
+    new Policy(1,'DL01','Term Insurance_Jeevan Labh',900000,'25 Years'),
+    new Policy(2,'DL02','Term Insurance_Spouse',65000,'10 Years'), 
+  ]
+  return mypolicies;
+
+}
 }
