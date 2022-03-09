@@ -1,6 +1,6 @@
 export class Policy 
 {
-    constructor(policySrNo:number,   policyID:string,    policyname: string ,   policyrate:number ,   policyterms:string) 
+    constructor(policySrNo:number,   policyID:string,    policyname: string ,   policyrate:string ,   policyterms:string) 
     {
         this.policySrNo=policySrNo;
         this.policyID=policyID;
@@ -12,6 +12,6 @@ export class Policy
     policySrNo:number;
     policyID:string ;
     policyname: string ;
-    policyrate:number;
+    policyrate:string;
     policyterms:string;
 }
