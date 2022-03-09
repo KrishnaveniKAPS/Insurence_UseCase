@@ -50,14 +50,14 @@
                     </div>
                     <div class="form-group">
                         <label>Price</label>
-                        <input type="number" class="form-control" formControlName="price"
+                        <input [(ngModel)]="price1" type="number" class="form-control" formControlName="price"
                             [ngClass]="{'is-invalid': price.errors && (price.touched || price.dirty), 'is-valid':price.valid}">
                         <div class="invalid-feedback">
                             <strong *ngIf="price.errors?.required"> Price is required</strong>
                             <strong *ngIf="price.errors?.min"> Price should be greated than zero.</strong>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-danger">Pay Now</button>
+                    <button (click)="makePayment(price1)" type="submit" class="btn btn-danger">Pay Now</button>
                     <button class="btn btn-default">Reset</button>
                 </form>
             </div>
