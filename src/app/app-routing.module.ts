@@ -9,7 +9,6 @@ import { PolicyDetailsComponent } from './policy-details/policy-details.componen
 import { DashBordComponent } from './dash-bord/dash-bord.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-// import { PaynowComponent } from './paynow/paynow.component';
 
 
 
@@ -22,7 +21,6 @@ const routes: Routes = [{path:'',component:HomeComponent},
 {path: 'dashboard',component:DashBordComponent},
 {path: 'aboutus', component:AboutUsComponent},
 {path: 'contactus', component:ContactUsComponent},
-// {path: 'paynow', component:PaynowComponent},
 {path:'home',component:HomeComponent}];
 
 @NgModule({
