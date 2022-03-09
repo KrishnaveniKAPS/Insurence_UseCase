@@ -10,6 +10,8 @@ import { Policy } from '../policy';
 export class PolicyDetailsComponent{
 
   policies : Policy[] | undefined; //array
+
+  mypolicies: Policy[] | undefined;  //added mypolicy array 
    policyService; //variable
  
    constructor()
@@ -24,6 +26,16 @@ export class PolicyDetailsComponent{
      //and store it in the array policies
      this.policies=this.policyService.getPolicies();
    }
+//creating a function in app.component to access the getPolicies() from PolicyService
+getmypolicies()
+{
+   //accessing the getpolicies() method from policyService class
+   //and store it in the array policies
+   this.mypolicies=this.policyService.getmypolicies();
+ }
+
+
+
     //ngStyle
   color: string = '#df4759';
 
