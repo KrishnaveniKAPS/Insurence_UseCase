@@ -50,6 +50,7 @@
                     </div>
                     <div class="form-group">
                         <label>Price</label>
+                        <!--taking price input from the user-->
                         <input [(ngModel)]="price1" type="number" class="form-control" formControlName="price"
                             [ngClass]="{'is-invalid': price.errors && (price.touched || price.dirty), 'is-valid':price.valid}">
                         <div class="invalid-feedback">
@@ -57,8 +58,12 @@
                             <strong *ngIf="price.errors?.min"> Price should be greated than zero.</strong>
                         </div>
                     </div>
-                    <button (click)="makePayment(price1)" type="submit" class="btn btn-danger">Pay Now</button>
-                    <button class="btn btn-default">Reset</button>
+                    <!-- added payment button-->
+                    <!--passing make payment function-->
+                    <button (click)="makePayment(price1)" type="submit" class="btn btn-danger">Pay
+                        Now</button>&nbsp;&nbsp;
+                    <!--Ended payment button-->
+                    <button class="btn btn-danger" type="reset">Reset</button>
                 </form>
             </div>
         </div>

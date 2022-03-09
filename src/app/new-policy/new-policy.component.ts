@@ -18,8 +18,8 @@ export class NewPolicyComponent implements OnInit {
   constructor() { }
   ngOnInit() {
 
+    this.invokeStripe();   //payment calling
 
-    this.invokeStripe();
     this.title = new FormControl('', [Validators.required, Validators.minLength(10)]);
     this.modelName = new FormControl();
     this.color = new FormControl('', Validators.pattern('[a-zA-Z]*'));
@@ -35,11 +35,11 @@ export class NewPolicyComponent implements OnInit {
       'price': this.price
     });
   }
-
+  //calling payment and price
   paymentHandler: any = null;
   price1: any;
 
-
+  //creating method for calling razarpay key and token
   makePayment(amount: any) {
     const paymentHandler = (<any>window).StripeCheckout.configure({
       key: 'pk_test_51H7bbSE2RcKvfXD4DZhu',
@@ -49,13 +49,15 @@ export class NewPolicyComponent implements OnInit {
         alert('Stripe token generated!');
       },
     });
+
+    // giving the Payment handler values for payment
     paymentHandler.open({
       name: 'Insurance',
       description: '5 Policies',
       amount: amount,
     });
   }
-
+  //creating invokeStripe method for payment
   invokeStripe() {
     if (!window.document.getElementById('stripe-script')) {
       const script = window.document.createElement('script');
