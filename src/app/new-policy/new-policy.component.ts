@@ -17,6 +17,9 @@ export class NewPolicyComponent implements OnInit {
   price: FormControl | any;
   constructor() { }
   ngOnInit() {
+    
+
+
     this.title = new FormControl('', [Validators.required, Validators.minLength(10)]);
     this.modelName = new FormControl();
     this.color = new FormControl('', Validators.pattern('[a-zA-Z]*'));
