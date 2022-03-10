@@ -4,6 +4,8 @@
 
 ## Home Page or Landing Page
 
+<hr>
+
 ![alt text](src/assets/images/read_me/1.png)
 
 ## Sign Up Page
