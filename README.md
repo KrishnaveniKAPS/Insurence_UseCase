@@ -3,45 +3,63 @@
 ![alt text](src/assets/images/read_me/3.png)
 
 ## Home Page or Landing Page
-
+<hr>
 <hr>
 
 ![alt text](src/assets/images/read_me/1.png)
 
 ## Sign Up Page
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/2.png)
 
 ## Sign In Page
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/4.png)
 
 ## Footer Section
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/5.png)
 
 ## All Policy Page
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/6.png)
 
 ## My Policy Page
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/8.png)
 
 ## Create New Policy Page
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/7.png)
 
 ## PAyment Page
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/9.png)
 ![alt text](src/assets/images/read_me/10.png)
 
 ## Our Team
+<hr>
+<hr>
 
 ![alt text](src/assets/images/read_me/11.png)
 
 ## Contact Us page
+<hr>
+<hr>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
