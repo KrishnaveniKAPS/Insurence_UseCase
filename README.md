@@ -24,9 +24,22 @@
 
 ## My Policy Page
 
-![alt text](src/assets/images/read_me/7.png)
+![alt text](src/assets/images/read_me/8.png)
 
 ## Create New Policy Page
+
+![alt text](src/assets/images/read_me/7.png)
+
+## PAyment Page
+
+![alt text](src/assets/images/read_me/9.png)
+![alt text](src/assets/images/read_me/10.png)
+
+## Our Team
+
+![alt text](src/assets/images/read_me/11.png)
+
+## Contact Us page
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
