@@ -2,6 +2,20 @@
 
 ![alt text](src/assets/images/read_me/3.png)
 
+## Home Page or Landing Page
+
+![alt text](src/assets/images/read_me/1.png)
+
+## Sign Up Page
+
+![alt text](src/assets/images/read_me/2.png)
+
+## Sign In Page
+
+![alt text](src/assets/images/read_me/4.png)
+
+## All Policy Page
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
 ## Development server
