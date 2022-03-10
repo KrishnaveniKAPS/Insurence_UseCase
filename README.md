@@ -14,7 +14,19 @@
 
 ![alt text](src/assets/images/read_me/4.png)
 
+## Footer Section
+
+![alt text](src/assets/images/read_me/5.png)
+
 ## All Policy Page
+
+![alt text](src/assets/images/read_me/6.png)
+
+## My Policy Page
+
+![alt text](src/assets/images/read_me/7.png)
+
+## Create New Policy Page
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
