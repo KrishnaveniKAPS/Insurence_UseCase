@@ -1,42 +1,25 @@
-// import { Component, OnInit } from '@angular/core';
-// import { UserRegistrationComponent } from '../user-registration/user-registration.component';
-// import { UserServiceService } from '../userservice.service';
-
-// @Component({
-//   selector: 'app-register',
-//   templateUrl: './register.component.html',
-//   styleUrls: ['./register.component.css']
-// })
-// export class RegisterComponent implements OnInit {
-//   public register="assets/images/register.jpg";
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
 import { Component, OnInit } from '@angular/core';
-//Observable module to Observables provide support for passing messages between 
-//parts of your application. They are used frequently in Angular and are 
-//the recommended technique for event handling, 
-//asynchronous programming, and handling multiple values.
 import { Observable } from 'rxjs';
-//import user.ts
 import { User } from '../user';
-//import user-service.service.ts
 import { UserServiceService } from '../userservice.service';
 //import for Form designing in Angular
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  public register="assets/images/register.jpg";
+  public register = "assets/images/register.jpg";
   allUsers: Observable<User[]> | any;
   userForm: FormGroup | any;
   dataSaved = false;
+
+  Name: FormControl | any;
+  Email: FormControl | any;
+  PhoneNumber: FormControl | any;
+  Password: FormControl | any;
+  ConfirmPassword: FormControl | any;
 
   userIdUpdate = null;
   massage = null;
@@ -74,13 +57,18 @@ export class RegisterComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loadAllUsers();
+    this.Name = new FormControl('', [Validators.required, Validators.minLength(10)]);
+    this.Email = new FormControl('', [Validators.required]);
+    this.PhoneNumber = new FormControl('', [Validators.required]);
+    this.Password = new FormControl('', [Validators.required, Validators.minLength(8)]);
+    this.ConfirmPassword = new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(14)]);
     console.log(this.allUsers)
     this.userForm = new FormGroup({
-      'Name': new FormControl(null),
-      'Email': new FormControl(null),
-      'PhoneNumber': new FormControl(null),
-      'Password': new FormControl(null),
-      'ConfirmPassword': new FormControl(null)
+      'Name': this.Name,
+      'Email': this.Email,
+      'PhoneNumber': this.PhoneNumber,
+      'Password': this.Password,
+      'ConfirmPassword': this.ConfirmPassword,
     })
   }
   loadAllUsers() {

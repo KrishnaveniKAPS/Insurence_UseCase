@@ -12,29 +12,64 @@
         <br>
         <div class="form-column">
           <div class="col">
-            <label for="name">Full Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="name"
-              style="border-radius: 20px;" formControlName="Name">
+            <label for="Name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Full Name" name="Name"
+              style="border-radius: 20px;" formControlName="Name"
+              [ngClass]="{'is-invalid': Name.errors && (Name.touched || Name.dirty), 'is-valid':Name.valid}">
+            <div class="invalid-feedback">
+              <!--*ngIf Directive-->
+              <strong *ngIf="Name.errors?.required">Name is required</strong>
+              <strong *ngIf="Name.errors?.minlength">Name length must be greater than
+                {{Name.errors?.minlength.requiredLength}} character. {{Name.errors?.minlength.requiredLength -
+                Name.errors?.minlength.actualLength}} more character required. </strong>
+            </div>
           </div>
           <div class="col">
             <label for="Email">Email</label>
             <input type="email" class="form-control" id="email" placeholder="Enter email" name="Email"
-              style="border-radius: 20px;" formControlName="Email">
+              style="border-radius: 20px;" formControlName="Email"
+              [ngClass]="{'is-invalid': Email.errors && (Email.touched || Email.dirty), 'is-valid':Email.valid}">
+            <div class="invalid-feedback">
+              <!--*ngIf Directive-->
+              <strong *ngIf="Email.errors?.required">Email is required</strong>
+            </div>
           </div>
           <div class="col">
             <label for="PhoneNumber">Phone Number</label>
             <input type="number" class="form-control" id="phonenumber" placeholder="Enter Phone Number"
-              name="phone_number" style="border-radius: 20px;" formControlName="PhoneNumber">
+              name="PhoneNumber" style="border-radius: 20px;" formControlName="PhoneNumber"
+              [ngClass]="{'is-invalid': PhoneNumber.errors && (PhoneNumber.touched || PhoneNumber.dirty), 'is-valid':PhoneNumber.valid}">
+            <div class="invalid-feedback">
+              <!--*ngIf Directive-->
+              <strong *ngIf="PhoneNumber.errors?.required">PhoneNumber is required</strong>
+            </div>
           </div>
           <div class="col">
             <label for="paw">Password</label>
             <input type="password" class="form-control" id="password" placeholder="Enter Password" name="pswd"
-              style="border-radius: 20px;" formControlName="Password">
+              style="border-radius: 20px;" formControlName="Password"
+              [ngClass]="{'is-invalid': Password.errors && (Password.touched || Password.dirty), 'is-valid':Password.valid}">
+            <div class="invalid-feedback">
+              <!--*ngIf Directive-->
+              <strong *ngIf="Password.errors?.required">Password is required</strong>
+              <strong *ngIf="Password.errors?.minlength">Password length must be greater than
+                {{Password.errors?.minlength.requiredLength}} character. {{Password.errors?.minlength.requiredLength -
+                Password.errors?.minlength.actualLength}} more character required. </strong>
+            </div>
           </div>
           <div class="col">
             <label for="confirmpassword">Confirm Password</label>
             <input type="password" class="form-control" id="confirmpassword" placeholder="Enter Confirm Password"
-              name="ConfirmPassword" style="border-radius: 20px;" formControlName="ConfirmPassword">
+              name="ConfirmPassword" style="border-radius: 20px;" formControlName="ConfirmPassword"
+              [ngClass]="{'is-invalid': ConfirmPassword.errors && (ConfirmPassword.touched || ConfirmPassword.dirty), 'is-valid':ConfirmPassword.valid}">
+            <div class="invalid-feedback">
+              <!--*ngIf Directive-->
+              <strong *ngIf="ConfirmPassword.errors?.required">Confirm Password is required</strong>
+              <strong *ngIf="ConfirmPassword.errors?.minlength">Confirm Password length must be greater than
+                {{ConfirmPassword.errors?.minlength.requiredLength}} character.
+                {{ConfirmPassword.errors?.minlength.requiredLength -
+                ConfirmPassword.errors?.minlength.actualLength}} more character required. </strong>
+            </div>
           </div>
           <div class="col">
             <br>
